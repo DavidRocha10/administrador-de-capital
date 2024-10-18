@@ -1,9 +1,9 @@
-Proceso GestionPresupuesto
-    Definir presupuesto, ingreso, gasto_total, precio , ojo, resta, sumatoria Como Real
+Algoritmo GestiÃ³nPresupuesto2
+	Definir presupuesto, ingreso, gasto_total, precio , ojo, resta, sumatoria Como Real
     Definir n, i Como Entero
     Definir productos Como Cadena
 	
-    // Inicialización de variables
+    // InicializaciÃ³n de variables
     presupuesto <- 0
     gasto_total <- 0
 	sumatoria <- 0
@@ -14,7 +14,7 @@ Proceso GestionPresupuesto
     Leer presupuesto
 	
     // Ingresar ingresos adicionales (si los hay)
-    Escribir "¿Desea registrar algún ingreso adicional? (1 para Sí, 0 para No): "
+    Escribir "Â¿Desea registrar algÃºn ingreso adicional? (1 para SÃ­, 0 para No): "
     Leer ingreso
     Si ingreso = 1 Entonces
         Escribir "Ingrese el monto adicional: "
@@ -23,11 +23,11 @@ Proceso GestionPresupuesto
     FinSi
     
     // Ingreso de productos
-    Escribir "¿Cuántos productos desea registrar? "
+    Escribir "Â¿CuÃ¡ntos productos desea registrar? "
     Leer n
 	Dimension productos(n)
 	Dimension precios(n)
-
+	
     Para i <- 1 Hasta n Hacer
         Escribir "Ingrese el nombre del producto ", i, ": "
         Leer productos[i]
@@ -47,9 +47,8 @@ Proceso GestionPresupuesto
     
     // Validar si se excede del presupuesto
     Si gasto_total > presupuesto Entonces
-        Escribir "¡Atención! Se ha excedido del presupuesto disponible."
+        Escribir "Â¡AtenciÃ³n! Se ha excedido del presupuesto disponible."
     SiNo
-        Escribir "Sus gastos están dentro del presupuesto."
+        Escribir "Sus gastos estÃ¡n dentro del presupuesto."
     FinSi
-FinProceso
-
+FinAlgoritmo
