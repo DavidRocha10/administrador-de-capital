@@ -3,17 +3,14 @@ Algoritmo GestiónPresupuesto2
     Definir n, i Como Entero
     Definir productos Como Cadena
 	
-    // Inicialización de variables
     presupuesto <- 0
     gasto_total <- 0
 	sumatoria <- 0
 	resta <- 0
     
-    // Ingreso del presupuesto inicial
     Escribir "Ingrese su presupuesto mensual inicial: "
     Leer presupuesto
 	
-    // Ingresar ingresos adicionales (si los hay)
     Escribir "¿Desea registrar algún ingreso adicional? (1 para Sí, 0 para No): "
     Leer ingreso
     Si ingreso = 1 Entonces
@@ -22,7 +19,6 @@ Algoritmo GestiónPresupuesto2
         presupuesto <- presupuesto + ingreso
     FinSi
     
-    // Ingreso de productos
     Escribir "¿Cuántos productos desea registrar? "
     Leer n
 	Dimension productos(n)
@@ -41,11 +37,9 @@ Algoritmo GestiónPresupuesto2
     Fin Para
 	
     
-    // Mostrar gastos totales y presupuesto disponible
     Escribir "Gasto total: ", gasto_total
 	presupuestoRestante = presupuesto - gasto_total
     
-    // Validar si se excede del presupuesto
     Si gasto_total > presupuesto Entonces
         Escribir "¡Atención! Se ha excedido del presupuesto disponible."
     SiNo
